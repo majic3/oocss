@@ -1,10 +1,17 @@
-body{font-family:"Myriad Pro","Segoe UI",Helvetica, Arial, sans-serif;}
+body{font:1em/1.625em "lucida grande","lucida sans unicode", sans-serif; background-color:#FFFEF0; font-size-adjust:none; font-style:normal; font-variant:normal; font-weight:normal;}
 /* **************** CONTENT OBJECTS ***************** */
 /* ====== Default spacing ====== */
 h1, h2, h3, h4, h5, h6, ul, ol,dl, p,blockquote {padding:10px;}
 h1, h2, h3, h4, h5, h6,img{padding-bottom:0px;}
 pre{margin: 10px;}
 table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl{padding:0;}
+
+p	{padding:0 0  0.8125em 0; color:#111; font-weight:300;}
+p + p {text-indent:1.625em;}
+p.first:first-letter{ float:left;font-family: baskerville,"palatino linotype",serif;font-size:3em;font-weight:700;line-height:1em;margin-bottom:-0.2em;padding:0.2em 0.1em 0 0; }
+p img       { float: left; margin: 0.5em 0.8125em 0.8125em 0; padding: 0; }
+p img.right { float: right; margin: 0.5em  0 0.8125em 0.8125em }
+
 /* ====== Elements ====== */
 img{display:block;}
 em{font-style: italic;}
@@ -13,12 +20,14 @@ hr{border: 5px solid #e2e2e2; border-width: 0 0 5px 0; margin: 20px 10px 10px 10
 code{color:#0B8C8F;}
 /* ====== Headings ====== */
 /* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
-h1, .h1{font-size:196%;  font-weight:normal; font-style: normal; color:#AE0345;}
-h2, .h2{font-size:167%; font-weight:normal; font-style: normal; color:#AE0345;}
-h3, .h3{font-size:146.5%; font-weight:normal; font-style: normal; color:#DF2B72;}
-h4, .h4{font-size:123.1%; font-weight:normal; font-style: normal; color: #333;}
-h5, .h5{font-size:108%; font-weight:bold; font-style: normal; color:#AE0345;}
-h6, .h6{font-size:108%; font-weight:normal;  font-style: italic; color:#333;}
+h1, .h1{font-size: 2.125em; margin-bottom: 0.765em;  font-weight:normal; font-style: normal; color:#AE0345;}
+h2, .h2{font-size: 1.9em;  margin-bottom: 0.855em; font-weight:normal; font-style: normal; color:#AE0345;}
+h3, .h3{font-size: 1.7em;  margin-bottom: 0.956em; font-weight:normal; font-style: normal; color:#DF2B72;}
+h4, .h4{font-size: 1.4em;  margin-bottom: 1.161em; font-weight:normal; font-style: normal; color: #333;}
+h5, .h5{font-weight:bold; font-style: normal; color:#AE0345;}
+h6, .h6{font-weight:normal;  font-style: italic; color:#333;}
+h5, .h5, h6, .h6{ font-size: 1.313em;  margin-bottom: 1.238em; }
+
 /* if additional headings are needed they should be created via additional classes, never via location dependant styling */
 .category{font-size:108%; font-weight:normal; font-style: normal; text-transform:uppercase; color: #333;}
 .category a{color: #333;}
@@ -32,10 +41,21 @@ a:visited { color:#005a9c; }
 ol.simpleList li{list-style-type: decimal; margin-left:40px;}
 /* standard list */
 ul.simpleList li{list-style-type:disc; margin-left:40px;}
+
+ul{list-style-position:outside;}
+li ul, 
+li ol  { margin:0 1.625em;  }
+ul, ol { margin: 0 0 1.625em 0; }
+
+
+dl { margin: 0 0 1.625em 0; }
+dl dt { font-weight: bold; }
+dl dd { margin-left: 1.625em; }
+
 /* ====== Tables ====== */
-.data{padding: 20px; position:relative; zoom:1;vertical-align: top;border-right:solid 1px transparent;/* border fixes a FF2 bug which causes the data table to overlay its borders*/}
+.data{margin-bottom:1.625em;padding: 20px; position:relative; zoom:1;vertical-align: top;border-right:solid 1px transparent;/* border fixes a FF2 bug which causes the data table to overlay its borders*/}
 .data table {width:100%;border:1px solid #AE0345;}
-th, td{vertical-align:top;border:1px solid #AE0345;}
+th, td{margin-bottom:1.625em;vertical-align:top;border:1px solid #AE0345;}
 .txtC, .data .txtC td, .data .txtC th{text-align:center;}
 .txtL, .data .txtL td, .data .txtL th{text-align:left;}
 .txtR, .data .txtR td, .data .txtR th{text-align:right;}
@@ -70,3 +90,17 @@ cite{display:block; text-align:right; padding-top: 10px;}
 .media .imgExt{float:right; margin-left: 10px;}
 /* ====== special formatting classes ====== */
 .detail{color: #777; font-size:11px;display:block;}
+
+
+abbr, acronym { border-bottom:1px dotted #000; }
+address { margin-top:1.625em; font-style: italic; }
+del {color:#000;}
+
+
+blockquote { padding:1em 1em 1.625em 1em; font-family:georgia,serif;font-style: italic;  }
+blockquote:before { content:"\201C";font-size:3em;margin-left:-.625em; font-family:georgia,serif;color:#aaa;line-height:0;}/* From Tripoli  */
+blockquote > p {padding:0; margin:0; }
+
+.oldbook { font-family:"Warnock Pro","Goudy Old Style","Book Antiqua","Palatino",Georgia,serif; }
+.note { font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-size:0.9em; margin:0.1em; color:#333; } 
+.mono { font-family:"Courier New", Courier, monospace; }
