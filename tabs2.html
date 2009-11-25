@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Tabs</title>
+<link rel="stylesheet" type="text/css" media="all"  href="css/libraries.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/content.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/mod.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/mod_skins.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/tabs.css" />
+
+<style type="text/css">
+.tabs .bd  ul {display: block; margin: 0; width: 388px; height: 388px; overflow: hidden;}
+.tabs .bd ul li {display: block; padding: 0 .2em 0 .2em; background: transparent; height: 388px;}
+</style>
+
+</head>
+
+<body>
+
+<div class="mod simple tabs"> 
+  <b class="top"><b class="tl"></b><b class="tr"></b></b> 
+  <div class="inner">
+    <div class="hd topper">
+      <ul class="tabControl"><li><a href="#tab1"><span>Tab 1</span></a></li><li><a href="#tab2"><span>Tab 2</span></a></li><li class="current"><a href="#tab3"><span>Tab 3 <br /> boo foo foo</span></a></li><li><a href="#tab4"><span>Tab 4</span></a></li><li><a href="#tab5"><span>Tab 5</span></a></li><li><a href="#tab6"><span>Tab 6 has lots and lots of text on one line</span></a></li></ul>
+    	<ul class="controls"><li><a href="#summary"><span>x</span></a></li><li><a href="#"><span>-</span></a></li><li><a href="#"><span>+</span></a></li></ul>
+    </div>
+    <div class="bd">
+      <ul>
+        <li id="summary">
+				<p>Summery of 1</p>
+				<p>Summery of 2</p>
+				<p>Summery of 3</p>
+				<p>Summery of 4</p>
+				<p>Summery of 5</p>
+				<p>Summery of 6</p>
+		</li>
+        <li id="tab1">Tab 1 Content</li>
+        <li id="tab2">Tab 2 Content</li>
+        <li class="current" id="tab3">Tab 3 Content</li>
+        <li id="tab4">Tab 4 Content</li>
+        <li id="tab5">Tab 5 Content</li>
+        <li id="tab6">Tab 6 Content</li>
+      </ul>
+    </div>
+  </div>
+  <b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+</div>
+
+
+<p>
+	I have been thinking of tabs &amp; navigation in OOCSS for sometime but left it stagnant after an initial burst.
+</p>
+
+<p>
+	I have found that removing the bold tabs only menas that the corners are not rounded (only checked ff).  there is an awful lot of markup - I know that Nicole is an advocate of more html (to gain visual control) over crufty css but this is alot of addition tags
+</p>
+
+<p>
+	I have added a simple tab switch using css - the current class would need to be updated via js
+</p>
+
+<p>
+	also tabs are not working in ie7 for me
+</p>
+
+</body>
+</html>
