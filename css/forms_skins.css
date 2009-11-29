@@ -1,0 +1,5 @@
+.base fieldset{margin:20px 10px;padding:20px 15px 20px 20px;background-color:#eee;border:1px solid #ccc;border-top-color:#bbb;border-bottom-color:#ddd;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.base .field .input,.base .field .input input,.base .field .input select,.base .field .input textarea{background-color:#fff;}
+.base .field .input,.base .field .select select{border:1px solid #ccc;border-top-color:#aaa;border-bottom-color:#ddd;}
+.base .field .input{padding:1px 1px 1px 3px;}
+.base .field .select{border:0 none;padding:0;background-color:transparent;}
