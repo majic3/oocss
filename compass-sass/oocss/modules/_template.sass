@@ -1,0 +1,58 @@
+=page(!width=960px, !margin = "0 auto", !name = "page")
+	.#{!name}
+		margin= !margin
+		width= !width
+
+=page-liquid(!w=100%)
+	+page("100%", "0 auto", "liquid")
+
+=body
+	+lblock
+
+=main
+	+lblock
+
+=leftCol(!w=250px)
+	+lblock(!w, "left")
+
+=rightCol(!w=300px)
+	+lblock(!w, "right")
+
+=lblock(!mw=0, !f = 0)
+	@if !mw == 0
+		overflow: hidden
+		_overflow: visible
+		_zoom: 1
+	@else
+		float= !f
+		@if !mw != 0
+			width: !mw
+		@else
+			width: 50%
+		_margin-#{!f}: -3px
+
+=afterFix
+	&:after
+		content: " x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x "
+		visibility: hidden
+		clear: both
+		height: 0 !important
+
+=oocss-template
+	/*	oocss default template - mixins of these classes exist too	*/
+	+page("1020px", ".3em auto", "page")
+
+	.body
+		+lblock
+		width: 100%
+		+afterFix
+
+	.main
+		+lblock
+		+afterFix
+
+	.leftCol
+		+lblock(180px, "left")
+
+	.rightCol
+		+lblock(400px, "left")

@@ -1,0 +1,99 @@
+=mod
+	margin: 10px
+
+	b
+		display: block
+		background-repeat: no-repeat
+		font-size: 1%
+		position: relative
+		z-index: 10
+
+=modSec
+	overflow: hidden
+	_overflow: visible
+	_zoom: 1
+
+
+=modInner
+	position: relative
+
+
+=modCorner
+	height: 10px
+	width: 10px
+	float: left
+
+
+=modtl
+	background-position: left top
+
+
+=modtr
+	background-position: right top
+
+
+=modbl
+	background-position: left bottom
+	margin-top: -10px
+
+
+=modbr
+	background-position: right bottom
+	float: right
+	margin-top: -10px
+
+
+=modtr
+	float: right
+	overflow: hidden
+	margin-bottom: -32000px
+
+
+=modtl
+	overflow: hidden
+	margin-bottom: -32000px
+
+
+=modtop
+	background-position: center top
+
+
+=modbottom
+	background-position: center bottom
+	_zoom: 1
+
+
+=modcomplex
+	overflow: hidden
+	*position: relative
+	*zoom: 1
+
+	.tl, .tr
+		height: 32000px
+		margin-bottom: -32000px
+		width: 10px
+
+	.bl, .br
+	.top, .bottom
+		height: 5px
+
+
+=modpop
+	overflow: visible
+	margin: 10px 20px 20px 10px
+	background-position: left top
+
+	.inner
+		right: -10px
+		bottom: -10px
+		background-position: right bottom
+		padding: 0 10px 10px 0
+
+	.tl, .br
+		display: none
+
+	.bl
+		bottom: -10px
+
+	.tr
+		right: -10px
