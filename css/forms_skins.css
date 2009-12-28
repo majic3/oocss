@@ -3,3 +3,12 @@
 .base .field .input,.base .field .select select{border:1px solid #ccc;border-top-color:#aaa;border-bottom-color:#ddd;}
 .base .field .input{padding:1px 1px 1px 3px;}
 .base .field .select{border:0 none;padding:0;background-color:transparent;}
+
+.base .button,.base .button:hover{background:transparent url(skin/forms/bt_base.png) no-repeat 100% 0;margin:10px;padding-right:5px;}
+/* put icons on the wider inner part of the background image to keep sensitive area as big as possible when using inputs */
+.base .button .inner{background:transparent url(skin/forms/bt_base.png) no-repeat 0 -40px;padding:5px 5px 5px 10px;}
+.base .button input.inner{*background-position:0 -38px;}
+.base .button.submit .inner{background-position:0 -80px;padding-left:25px;}
+.base .button.submit input.inner{*background-position:0 -78px;}
+.base .button.cancel .inner{background-position:0 -120px;padding-left:25px;}
+.base .button.cancel input.inner{*background-position:0 -118px;}
