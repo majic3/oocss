@@ -3,7 +3,6 @@ legend{display:none;/*prevents unwanted additional margin,allows rounded corner 
 display/*\**/:block\9;/*ie8 only*/
 width:0;height:0;visibility:hidden;_display:none;/*needed for ie6,ie7 optional for consistency with modern browsers*/}
 select,input,button,textarea{margin:0;border:0 none;padding:0;}
-button::-moz-focus-inner,input::-moz-focus-inner{margin:0;padding:0;}
 
 /* FORMS */
 /* top-labels */
@@ -16,15 +15,21 @@ label,.field{margin-right:5px;padding-bottom:1em;_zoom:1;}
 .tick{position:relative;margin-right:0;}
 .ticks .tick{clear:none;float:left;}
 .tick .label{float:left;padding:0 20px;}
-.tick .input{position:absolute;top:1px;left:1px;*top:-3px;*left:-3px;}
-.tick .input input{position:absolute;top:0;left:0;}
-.field .input input,.field .input select,.field .input textarea{width:100%;}
+.tick .input{position:absolute;top:1px;left:1px;*top:-3px;*left:-3px;line-height:0;}
+.field .input input,.field .input select,.field .input textarea{width:100%;background-color:transparent;}
 
 /* labels right, extends top-labels */
 .sbs .field .label{float:right;width:25%;margin:2px 0 0 10px;}
 
 /* labels left, extends .sbs */
-.rev .tick,
-.rev .ticks{left:10px;_left:13px;margin-left:25%;margin-right:10px;}
+.rev .tick,.rev .ticks{left:10px;_left:13px;margin-left:25%;margin-right:10px;}
 .rev .ticks .tick{margin-left:0;margin-right:0;}
 .rev .field .label{float:left;margin:2px 10px 0 0;text-align:right;}
+
+/* buttons */
+.button,.button:focus,.button:hover,.button .inner{float:left;color:#000;background-color:transparent;
+	line-height:1.231em;/* seems to be the best compromise for equal link/buttons/inputs styling across browsers */
+	white-space:nowrap;text-decoration:none;font-weight:normal;cursor:pointer;/* equalize links/buttons/inputs */
+	*overflow:visible;/* remove IE5/6/7 auto-added left/right padding */}
+button.button::-moz-focus-inner,.button input::-moz-focus-inner{margin:-1px;padding:0;}/* remove firefox extra margin/padding */
+button.button .inner,.button input{*margin:-.15em 0;}
