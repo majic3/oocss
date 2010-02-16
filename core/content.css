@@ -12,24 +12,46 @@ strong{font-weight:bold;}
 hr{border: 5px solid #e2e2e2; border-width: 0 0 5px 0; margin: 20px 10px 10px 10px;}
 code{color:#0B8C8F;}
 /* ====== Headings ====== */
-/* @TODO remove repeated */
+/* @TODO remove repeated - is this good or bad */
+/* @TODO text sizing in IE is bigger than it is in other browsers ie8 ok ie7 & ie6 bigger text.  Is this because of my use of em. Am sure em can work in IE7&IE6 or am I wrong - also am sure em's are better again I may be wrong. Don't have a source that based this info on (test vr with % in place of em's)*/
+/* @TODO vr issues affect ie8 more than ie7 what about ie6? */
 /* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
-h1, .h1{font-size:196%;  font-weight:normal; font-style: normal; color:#234236;}
-h2, .h2{font-size:167%; font-weight:normal; font-style: normal; color:#234236;}
-h3, .h3{font-size:146.5%; font-weight:normal; font-style: normal; color:#484488;}
-h4, .h4{font-size:123.1%; font-weight:normal; font-style: normal; color: #555;}
-h5, .h5{font-size:108%; font-weight:bold; font-style: normal; color:#234236;}
-h6, .h6{font-size:108%; font-weight:normal;  font-style: italic; color:#555;}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {	margin: 0;	font-weight:normal;  	}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h6, .h6 {	font-weight:normal;  	}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {	font-style: normal;	}
+
+h1, .h1 {	font-size: 1.6677em;	line-height: 0.9em;	margin-bottom: 0.9em;	}
+h2, .h2 {	font-size: 1.5em;		line-height: 1em;	margin-bottom: 1em;		}
+h3, .h3 {	font-size: 1.3333em;	line-height: 1.125em;	margin-bottom: 1.125em;}
+h4, .h4 {	font-size: 1.1666em;	line-height: 1.2857em;	margin-bottom: 1.2857em;	}
+h5, .h5,
+h6, .h6 {	font-size: 1.1667em;	line-height: 1.2858em;	margin-bottom: 1.2857em;	}
+
+h1, .h1{color:#234236;}
+h2, .h2{color:#234236;}
+h3, .h3{color:#484488;}
+h4, .h4{color: #555;}
+h5, .h5{font-weight:bold; color:#234236;}
+h6, .h6{font-style: italic; color:#555;}
 
 /*info@majic3.com - added this for vertical-rhythm - but padding also need adjustin - to 0 next stage to adjust it back*/
 p, ul, blockquote, pre, td, th, label {	margin: 0;	font-size: 1em;	line-height: 1.5em;	margin-bottom: 1.5em;	}
-h1, .h1 {	margin: 0;	font-size: 1.6666666666666667em;	line-height: 0.9em;	margin-bottom: 0.9em;	}
-h2, .h2 {	margin: 0;	font-size: 1.5em;	line-height: 1em;	margin-bottom: 1em;		}
-h3, .h3 {	margin: 0;	font-size: 1.3333333333333333em;	line-height: 1.125em;	margin-bottom: 1.125em;}
-h4, .h4 {	margin: 0;	font-size: 1.1666666666666667em;	line-height: 1.2857142857142858em;	margin-bottom: 1.2857142857142858em;	}
-h5, .h5 {	margin: 0;	font-size: 1.1666666666666667em;	line-height: 1.2857142857142858em;	margin-bottom: 1.2857142857142858em;	}
-h6, .h6 {	margin: 0;	font-size: 1.1666666666666667em;	line-height: 1.2857142857142858em;	margin-bottom: 1.2857142857142858em;	}
-p.small {	margin: 0;	font-size: 0.8333333333333334em;	line-height: 1.8em;	margin-bottom: 1.8em;	}
+p.small {	font-size: 0.8334em;	line-height: 1.8em;	margin-bottom: 1.8em;	}
 table {	border-collapse: collapse;	margin-bottom: 1.5em;	}
 
 
@@ -77,6 +99,12 @@ cite{display:block; text-align:right; padding-top: 10px;}
 /* will need to either 
 1. find a way to capture the width of the caption in the width of the image or flash
 2. Set some default widths, mby use flickr widths?
+
+	is it possible to use .media as a wrapper for swfobject content
+	in cases media is going to have a set width & height per item - I am thinking that in these cases I will favour using #elementIdent and setting with & height there
+	AFAIK swfobject content works better with wrappers that have height set this urges me toward the thinking above
+
+	have to make some media tests
 */
 /* ====== media ====== */
 .media{overflow:hidden; overflow:visible; zoom:1;margin:10px;}
