@@ -20,8 +20,9 @@
 .controls{position:absolute; top:0; right: 0;}
 .controls a{padding: 10px;}
 /*
-TODO: Allow % widths of tabs
-TODO: Position tab control top, right, bottom, left
+@TODO: Allow % widths of tabs
+@TODO: Position tab control top, right, bottom, left
+@TODO: messed up in completely in IE
 
 
 */
