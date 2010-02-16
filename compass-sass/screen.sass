@@ -1,7 +1,27 @@
 /*
-	Welcome to Susy. Use this file to define screen styles.
+	This stylesheet is OOCSS compiled with compass = ooSass.
+	I have a number of work aides that I am refining to assist the result allows me to 
+	make better CSS more to come. There is much to perfect I want to achieve many aims 
+	in unisome with this tool.  Each of these aims have been achieved using this methed 
+	(in isolation & with older versions of Compass & OOCSS)
+
+	In this file you should write your main styles. (or centralize your imports)
 	Import this file using the following HTML or equivalent:
-	<link href="/stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+	some temp mixins think of better ways to do this
+
+	TOC
+		01. OOCSS
+			01.1. LIB
+			01.2. TEMPLATE
+			01.3. GRID
+			01.4. CONTENT
+
+		02. MOD
+
+		03. PLUGINS
+
 
 
 //
@@ -183,10 +203,10 @@
 
 // @endregion
 
+/* # BEGIN OOCSS # */
+
+
 @import oocss/oocss.sass
-
-
-/* @group OOCSS */
 
 /*	reset	*/
 +oocss-lib
@@ -195,9 +215,8 @@
 /*	grids	*/
 +oocss-grids
 /*	content	*/
-+azbuka-text
++oocss-content
 
-/*	mods	*/
 .mod
 	+mod
 .modSec
@@ -225,109 +244,33 @@
 .modpop
 	+modpop
 
-/*	mod skins	*/
-.modsimpleskin
-	+modsimpleskin
-.modbasicskin
-	+modbasicskin
-.modsimpleExtskin
-	+modsimpleExtskin
-.modmeskin
-	+modmeskin
-.modnotedskin
-	+modnotedskin
-.modgrabskin
-	+modgrabskin
-.modonlinestoreskin
-	+modonlinestoreskin
-.modaboutskin
-	+modaboutskin
-	+modtalkskin
-.modtalkskin
-	+modphotoskin
-.modflowskin
-	+modflowskin
-.modbooskin
-	+modbooskin
-.modexcerptskin
-	+modexcerptskin
-.modsommersskin
-	+modsommersskin
-.gonzaloskin
-	+gonzaloskin
-.sale
-	+sale
-.nicole
-	+nicole
-.highlight
-	+highlight
-.universe
-	+universe
-.foo
-	+foo
-.login
-	+login
-.comment
-	+comment
-.hd
-	+hd
-.section
-	+section
-.act
-	+act
-.topper
-	+topper
-.bam
-	+bam
-.gonz
-	+gonz
-.gonz
-	+online
-.help
-	+help
-.info
-	+info
+/* # END OOCSS # */
+
+/* # BEGIN Additional # */
 
 
-// nav
-.nv
-	+nv
+/* # END Additional # */
 
-// formy
-+formy
+/* # BEGIN CUSTOM # */
 
-
-/* @end */
-
-
-/* @group STRUCTURE */
+/*
+	your custom css here - as you use this csspress method you move use bespoke css 
+	structure made from mixins from oocss core + plugins in your structure. removing 
+	them from oo output.  This is not yet perfected use with tools google-speed, 
+	yslow, dust-me etc.
 
 
+#toc .toc
+	+current
 
-/* @end */
+.leftCol
+	width: 470px
+	padding-right: 5px
 
-  
-/* @group COMPONENTS by type */
+.bd	p,
+.bd	ol
+	padding: .8em 1.2em
 
-/* @end */
-
-
-/* @group OVERRIDES by content */
-
-/* @end */
-
-
-/* @group OVERRIDES by page */
-
-
-
-/* @end */
-
-
-/* @group DEBUG */
-
-// Uncomment, adjust and use for debugging
-// #page
-//   +show-grid("your-grid-image.png")
-
-/* @end */
+li.unit
+	width: 45%
+	margin: 2% 0 0 3%

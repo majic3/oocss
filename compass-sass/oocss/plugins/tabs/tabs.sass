@@ -1,0 +1,63 @@
+.tabs
+  .hd
+    ul
+      padding: 0
+      display: table-row
+      _zoom: 1
+
+    li
+      display: table-cell
+      _display: inline
+      vertical-align: middle
+
+    .tabControl li
+      a
+        display: inline-block
+        text-decoration: none
+
+      span
+        display: inline-block
+        text-align: center
+        padding: 5px 20px
+
+  .bd li
+    display: none
+
+    &.current
+      display: block
+
+  .topper
+    padding: 0
+
+  .hd .tabControl li
+    border-right: solid 1px #ccc
+    border-left: solid 1px #fff
+
+  .tabControl li
+    &:last-child
+      border-right: none
+
+    &:first-child
+      border-left: none
+
+  a
+    font-weight: normal
+    color: #333
+
+  .hd .tabControl .current
+    background-color: #fff
+
+  li a:hover
+    color: #FF0033
+
+  .hd li span
+    cursor: pointer
+
+
+.controls
+  position: absolute
+  top: 0
+  right: 0
+
+  a
+    padding: 10px
