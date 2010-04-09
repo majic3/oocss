@@ -61,8 +61,9 @@ table {	border-collapse: collapse;	margin-bottom: 1.5em;	}
 .category a{color: #333;}
 .important a{font-weight:bold;}
 /* links */
-a { color: #036; font-weight:bold;text-decoration: none }
-a:focus, a:hover { text-decoration: underline }
+a {color: #2c4460; text-decoration: none;}
+a:focus, a:hover {text-decoration: underline;}
+a:focus{background-color:#FFFFCC;}
 a:visited { color:#005a9c; }
 /* ====== Lists ======*/
 /* numbered list */
