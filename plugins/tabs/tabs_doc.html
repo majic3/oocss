@@ -74,16 +74,29 @@
 		<a href="http://www.codenothing.com/archives/2010/8-jquery-micro-optimization-tips/">8 jquery optimization techs</a>
 	</p>
 
+
+<div id="code" class="mod simple"> 
+	<b class="top"><b class="tl"></b><b class="tr"></b></b>
+	<div class="inner">
 	<code class="js">
+	<pre>
+
 		var tabClick = function (e)	{
-			jQuery(this).parent('ul').find('.current').removeClass('current').end()
-			.parent('li').addClass('current');
+			$tab = jQuery(this).parent().closest('.tabs');
+			$tab.find('li.current').removeClass('current').end()
+				.find('li#'+this.rel).addClass('current');
+			jQuery(this).closest('li').addClass('current');
+			e.stopPropagation();
 		}
 		jQuery(document).ready(function()	{
 			jQuery.tabs = jQuery( '.tabs' );
 			jQuery.tabs.find('ul.hd').delegate('a', 'click', tabClick);
 		});
+	</pre>
 	</code>
+	</div>
+	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+</div>
 
 
 
