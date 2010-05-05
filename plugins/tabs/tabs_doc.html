@@ -3,40 +3,82 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Tabs</title>
-<link rel="stylesheet" type="text/css" media="all"  href="css/libraries.css" />
-<link rel="stylesheet" type="text/css" media="all" href="css/content.css" />
-<link rel="stylesheet" type="text/css" media="all" href="css/mod.css" />
-<link rel="stylesheet" type="text/css" media="all" href="css/mod_skins.css" />
-<link rel="stylesheet" type="text/css" media="all" href="css/tabs.css" />
+<link rel="stylesheet" type="text/css" media="all"  href="../../core/libraries.css" />
+<link rel="stylesheet" type="text/css" media="all" href="../../core/content.css" />
+<link rel="stylesheet" type="text/css" media="all" href="../../core/module/mod.css" />
+<link rel="stylesheet" type="text/css" media="all" href="../../core/module/mod_skins.css" />
+<link rel="stylesheet" type="text/css" media="all" href="../../plugins/tabs/tabs.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+		var tabClick = function (e)	{
+			$tab = jQuery(this).parent().closest('.tabs');
+			$tab.find('li.current').removeClass('current').end()
+				.find('li#'+this.rel).addClass('current');
+			jQuery(this).closest('li').addClass('current');
+			e.stopPropagation();
+		}
+		jQuery(document).ready(function()	{
+			jQuery.tabs = jQuery( '.tabs' );
+			jQuery.tabs.find('ul.hd').delegate('a', 'click', tabClick);
+		});
+</script>
 
 </head>
 
 <body>
 
-<div class="mod simple tabs"> 
-  <b class="top"><b class="tl"></b><b class="tr"></b></b> 
-  <div class="inner">
-    <div class="hd topper">
-      <ul class="tabControl"><li><a href="#"><span>Tab 1</span></a></li><li><a href="#"><span>Tab 2</span></a></li><li class="current"><a href="#"><span>Tab 3 <br /> boo foo foo</span></a></li><li><a href="#"><span>Tab 4</span></a></li><li><a href="#"><span>Tab 5</span></a></li><li><a href="#"><span>Tab 6 has lots and lots of text on one line</span></a></li></ul>
-    	<ul class="controls"><li><a href="#"><span>x</span></a></li><li><a href="#"><span>-</span></a></li><li><a href="#"><span>+</span></a></li></ul>
-    </div>
-    <div class="bd">
-      <ul>
-        <li>Tab 1 Content</li>
-        <li>Tab 2 Content</li>
-        <li class="current">
-			Tab 3 Content
-			<ul><li>list item</li></ul>
-			<br /><br /><br />
-		</li>
-        <li>Tab 4 Content</li>
-        <li>Tab 5 Content</li>
-        <li>Tab 6 Content</li>
-      </ul>
-    </div>
-  </div>
-  <b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+<div id="tabex" class="mod simple tabs"> 
+	<b class="top"><b class="tl"></b><b class="tr"></b></b>
+	<div class="inner">
+		<ul class="hd topper tabControl">
+			<li><a href="#tab1" rel="tab1"><span>Tab 1</span></a></li>
+			<li><a href="#tab2" rel="tab2"><span>Tab 2</span></a></li>
+			<li class="current"><a href="#tab3" rel="tab3"><span>Tab 3 <br /> boo foo foo</span></a></li>
+			<li><a href="#tab4" rel="tab4"><span>Tab 4</span></a></li>
+			<li><a href="#tab5" rel="tab5"><span>Tab 5</span></a></li>
+			<li><a href="#tab6" rel="tab6"><span>Tab 6 has lots and lots of text on one line</span></a></li>
+		</ul>
+		<div class="bd">
+			<ul>
+				<li id="tab1">Tab 1 Content</li>
+				<li id="tab2">Tab 2 Content</li>
+				<li id="tab3" class="current">
+					Tab 3 Content
+					<ul><li>list item</li></ul>
+					<br /><br /><br />
+				</li>
+				<li id="tab4">Tab 4 Content</li>
+				<li id="tab5">Tab 5 Content</li>
+				<li id="tab6">Tab 6 Content</li>
+			</ul>
+		</div>
+	</div>
+	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
 </div>
+
+	<h1>Tab Modules</h1>
+	<h2>two lists hd (head list navigation) &amp; bd (body content)</h2>
+	<p>
+		a sweet little setup which achieve an effect commonly used on the web (bbc &amp; yahoo) both have such a thing on respetive home pages.  The class current needs to be remove and reapplied to new current using some js.  This is better than using a fully js reliant tab system (it works sans js albeit with updating head navigation of tabs) often JS is used to achieve results which css can do.
+
+		The mini piece of script below uses jquery to update the remove the class current from but OOCSS is JS agnostic.  The methodology of OOCSS does not seek to favour the use of any one js framework over any other - or in other words you can use the framework of your choice 
+
+		<a href="http://www.codenothing.com/archives/2010/8-jquery-micro-optimization-tips/">8 jquery optimization techs</a>
+	</p>
+
+	<code class="js">
+		var tabClick = function (e)	{
+			jQuery(this).parent('ul').find('.current').removeClass('current').end()
+			.parent('li').addClass('current');
+		}
+		jQuery(document).ready(function()	{
+			jQuery.tabs = jQuery( '.tabs' );
+			jQuery.tabs.find('ul.hd').delegate('a', 'click', tabClick);
+		});
+	</code>
+
 
 
 </body>

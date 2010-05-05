@@ -1,20 +1,22 @@
 .tabs{}
 .tabs .hd{}
-.tabs .hd ul{padding:0; display:table-row;_zoom:1;}
+.tabs .hd {padding:0; display:table-row;_zoom:1;}
+.tabs .tabControl {width: 100%}
 .tabs .hd li{display:table-cell;_display:inline;vertical-align:middle;}
-.tabs .hd .tabControl li a{display:inline-block;text-decoration: none;}
-.tabs .hd .tabControl li span{display:inline-block; text-align:center; padding: 5px 20px;}
+.tabs .hd li a{display:inline-block;text-decoration: none;}
+.tabs .hd li span{display:inline-block; text-align:center; padding: 5px 20px;}
 .tabs .bd li{display:none;}
 .tabs .bd li li{display:block;}
-.tabs .bd li.current{display:block; }
+.tabs .bd li.current,
+.tabs .bd li:target{display:block; }
 
 .tabs .topper{padding:0;}
 
-.tabs .hd .tabControl li{border-right:solid 1px #ccc; border-left:solid 1px #fff;}
-.tabs .tabControl li:last-child{border-right:none;}
-.tabs .tabControl li:first-child{border-left:none;}
+.tabs .hd li{border-right:solid 1px #ccc; border-left:solid 1px #fff;}
+.tabs .hd li:last-child{border-right:none;}
+.tabs .hd li:first-child{border-left:none;}
 .tabs a{font-weight:normal; color: #333;}
-.tabs .hd .tabControl .current{background-color: #fff;}
+.tabs .hd .current{background-color: #fff;}
 .tabs li a:hover{color:#FF0033;}
 .tabs .hd li span{cursor:pointer;}
 
