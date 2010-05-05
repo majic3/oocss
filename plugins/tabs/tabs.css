@@ -7,7 +7,7 @@
 .tabs .hd li span{display:inline-block; text-align:center; padding: 5px 20px;}
 .tabs .bd li{display:none;}
 .tabs .bd li li{display:block;}
-.tabs .bd li.current,
+.tabs .bd li.current{display:block; }
 .tabs .bd li:target{display:block; }
 
 .tabs .topper{padding:0;}
