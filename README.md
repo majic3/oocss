@@ -19,6 +19,7 @@ _Example:_
         +-flow_skin.css  
         +-img/  
 
+
 ## Ideas for this fork
 
 * Add navigation systems
@@ -31,3 +32,5 @@ _Example:_
 * Revising navigation system - now looking at Hovecana by Apmyp. My for is at github.com/majic3/hovecana
 * completely revise the use of sitemap
 * Looking at many by Vladimir Carrer
+
+
