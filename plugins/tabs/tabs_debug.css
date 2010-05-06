@@ -1,0 +1,6 @@
+body .tabs{background-color: brown;}
+body .tabs .hd{background-color: black;}
+body .tabs .hd ul{background-color: blue;}
+body .tabs .hd ul li{background-color: yellow;}
+body .tabs .hd ul li a{background-color: orange;}
+body .tabs .bd ul li { background-color: fuschia; }

@@ -49,21 +49,8 @@ TODO: clean up selector structure - too much variation in rule strength
 .tabPosRight .tabControl a, .tabPosRight .tabControl span, .tabPosRight .tabControl li, .tabPosRight .hd ul{display:block;text-align: left;}
 .tabPosRight .hd{border-left: 1px solid #e2e2e2;margin-left:-1px;}
 .tabPosRight .bd {border-right: 1px solid #e2e2e2; display: table-cell;}
+
 /* bottom side tabs */
-
-
 
 /*.inner:after,.bd:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
 .inner, .bd{*zoom:1;}*/
-
-
-
-/* debug */
-/*
-.tabs{background-color: brown;}
-.tabs .hd{background-color: black;}
-.tabs .hd ul{background-color: blue;}
-.tabs .hd ul li{background-color: yellow;}
-.tabs .hd ul li a{background-color: orange;}
-.tabs .bd ul li { background-color: fucia; }
-*/
