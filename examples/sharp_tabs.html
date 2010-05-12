@@ -25,8 +25,8 @@
 .sharp.tabPosRight .bd li.current{position: absolute; width: 67%;}
 .sharp.tabPosLeft .bd li.current{left: 33%;}
 
-.sharp .bd .current {left: 0; z-index:888}
-.sharp .bd :target {left: 0; z-index:999}
+.sharp .bd .current {left: 0; z-index:777}
+.sharp .bd :target {left: 0; z-index:888}
 
 </style>
 
@@ -36,7 +36,7 @@
 		   $tab = jQuery(this).parent().closest('.tabs');
 		   console.info($tab);
 		   $tab.find('li.current').removeClass('current').end()
-				   .find('li#'+this.rel).addClass('current');
+				   .find('li#'+this.rel).addClass('current').css({zIndex: 999});
 		   jQuery(this).closest('li').addClass('current');
 		   e.preventDefault();
 	}
